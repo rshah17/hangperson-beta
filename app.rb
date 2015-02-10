@@ -42,6 +42,12 @@ class HangpersonApp < Sinatra::Base
     result = @game.guess(letter)
     if result == false
       flash[:message] = "You have already used that letter."
+    elsif result == 'nil'
+      flash[:message] = "Letter is nil."
+    elsif result == 'empty'
+      flash[:message] = "Must enter letter."
+    elsif result == "invalid"
+      flash[:message] = "Invalid Guess."
     end
     redirect '/show'
   end
