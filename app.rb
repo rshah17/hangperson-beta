@@ -41,7 +41,7 @@ class HangpersonApp < Sinatra::Base
 
 
     if params[:guess].to_s == ''
-      flash[:message] = "must enter letter"
+      flash[:message] = "Invalid guess."
       redirect '/show'
     end
     letter = params[:guess].to_s[0]
