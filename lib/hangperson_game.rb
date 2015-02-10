@@ -23,23 +23,23 @@ class HangpersonGame
   def guess(letter)
     letter = letter.downcase
     if letter == nil
-      begin
+      /begin
         raise ArgumentError.new('letter is nil')
-      rescue ArgumentError
-        return 'nil'
-      end
+      rescue ArgumentError/
+      return 'nil'
+      /end/
     elsif letter == ''
-      begin
+      /begin
         raise ArgumentError.new('cannot enter empty letter')
-      rescue ArgumentError
-        return 'empty'
-      end
+      rescue ArgumentError/
+      return 'empty'
+      /end/
     elsif !(letter.ord.between?(65,90) or letter.ord.between?(97,122))
-      begin
+      /begin
         raise ArgumentError.new('letter must be a character')
-      rescue ArgumentError
-        return 'invalid'
-      end
+      rescue ArgumentError/
+      return 'invalid'
+      /end/
     end
     if @word.include? letter
       if !(@guesses.include? letter)
