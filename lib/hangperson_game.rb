@@ -21,6 +21,7 @@ class HangpersonGame
   end
 
   def guess(letter)
+    letter = letter.downcase
     if letter == nil
       raise ArgumentError.new('letter is nil')
     elsif letter == ''
