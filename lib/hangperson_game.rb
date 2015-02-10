@@ -22,13 +22,7 @@ class HangpersonGame
 
   def guess(letter)
     letter = letter.downcase
-    if letter == nil
-      /begin
-        raise ArgumentError.new('letter is nil')
-      rescue ArgumentError/
-      return 'nil'
-      /end/
-    elsif letter == ''
+    if letter == ''
       /begin
         raise ArgumentError.new('cannot enter empty letter')
       rescue ArgumentError/
