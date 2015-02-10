@@ -39,6 +39,7 @@ class HangpersonGame
         raise ArgumentError.new('letter must be a character')
       rescue ArgumentError
         return 'invalid'
+      end
     end
     if @word.include? letter
       if !(@guesses.include? letter)
